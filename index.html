@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viaja SV - Descubre El Salvador</title>
+    <title id="page-title">Viaja SV - Descubre El Salvador</title>
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,24 +63,29 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Logo: intenta img/logo.png, fallback SVG mountain icon -->
+                <!-- Logo -->
                 <a href="#" class="flex items-center gap-3 group">
-                    <img src="img/logo/logo.png" alt="Viaja SV" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.style.display='none'; document.getElementById('logo-fallback-nav').style.display='flex';">
-                    
+                    <img src="img/logo/logo.png" alt="Viaja SV" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.style.display='none';">
                 </a>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#inicio" class="text-white hover:text-white/80 transition-colors">Inicio</a>
-                    <a href="#descubre" class="text-white/90 hover:text-white transition-colors">Descubre</a>
-                    <a href="#como-funciona" class="text-white/90 hover:text-white transition-colors">Cómo funciona</a>
-                    <a href="#experiencias" class="text-white/90 hover:text-white transition-colors">Experiencias</a>
-                    <a href="#sobre-nosotros" class="text-white/90 hover:text-white transition-colors">Sobre nosotros</a>
-                    <a href="#contacto" class="text-white/90 hover:text-white transition-colors">Contacto</a>
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium">
+                    <a href="#inicio" data-i18n="nav_inicio" class="text-white hover:text-white/80 transition-colors">Inicio</a>
+                    <a href="#descubre" data-i18n="nav_descubre" class="text-white/90 hover:text-white transition-colors">Descubre</a>
+                    <a href="#como-funciona" data-i18n="nav_como_funciona" class="text-white/90 hover:text-white transition-colors">Cómo funciona</a>
+                    <a href="#experiencias" data-i18n="nav_experiencias" class="text-white/90 hover:text-white transition-colors">Experiencias</a>
+                    <a href="#sobre-nosotros" data-i18n="nav_sobre_nosotros" class="text-white/90 hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="#contacto" data-i18n="nav_contacto" class="text-white/90 hover:text-white transition-colors">Contacto</a>
+
+                    <!-- BOTÓN DE IDIOMA TRANSPARENTE CON MUNDO -->
+                    <button id="lang-toggle-btn" type="button" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-white hover:text-white bg-transparent hover:bg-white/10 border border-white/25 hover:border-white/50 transition-all text-xs font-semibold cursor-pointer shadow-sm" aria-label="Cambiar idioma / Switch language" title="Cambiar idioma">
+                        <i data-lucide="globe" class="w-4 h-4 text-white"></i>
+                        <span id="lang-label" class="tracking-wider">ES</span>
+                    </button>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <div class="lg:hidden flex items-center">
+                <div class="lg:hidden flex items-center gap-2">
                     <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle menu">
                         <i data-lucide="menu" id="menu-icon-open" class="w-7 h-7"></i>
                         <i data-lucide="x" id="menu-icon-close" class="w-7 h-7 hidden"></i>
@@ -91,23 +96,32 @@
 
         <!-- Mobile Navigation Menu Dropdown -->
         <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark/95 backdrop-blur-md border-b border-white/10 px-4 pt-4 pb-6 space-y-3">
-            <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Inicio</a>
-            <a href="#descubre" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Descubre</a>
-            <a href="#como-funciona" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Cómo funciona</a>
-            <a href="#experiencias" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Experiencias</a>
-            <a href="#sobre-nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Sobre nosotros</a>
-            <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Contacto</a>
+            <a href="#inicio" data-i18n="nav_inicio" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Inicio</a>
+            <a href="#descubre" data-i18n="nav_descubre" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Descubre</a>
+            <a href="#como-funciona" data-i18n="nav_como_funciona" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Cómo funciona</a>
+            <a href="#experiencias" data-i18n="nav_experiencias" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Experiencias</a>
+            <a href="#sobre-nosotros" data-i18n="nav_sobre_nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Sobre nosotros</a>
+            <a href="#contacto" data-i18n="nav_contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Contacto</a>
+            
+            <!-- Botón de Idioma en Móvil -->
+            <div class="pt-2 pb-1 flex items-center justify-between border-t border-white/10 px-2">
+                <span class="text-xs text-gray-400 font-medium uppercase" data-i18n="mobile_lang_label">Idioma:</span>
+                <button id="mobile-lang-toggle-btn" type="button" class="flex items-center gap-2 px-3 py-1.5 rounded-full text-white bg-transparent hover:bg-white/10 border border-white/20 text-xs font-semibold transition-all">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span id="mobile-lang-label">Español (ES)</span>
+                </button>
+            </div>
+
             <div class="pt-2">
                 <a href="https://viajasv.alc.onl/" class="block w-full text-center px-6 py-3 text-sm font-semibold text-white btn-custom-navy rounded-full">
-                    Ir a la plataforma
+                    <span data-i18n="btn_ir_plataforma">Ir a la plataforma</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (Landscape background, clean header with #032252 semitransparent button) -->
+    <!-- 2. HERO SECTION -->
     <section id="inicio" class="relative min-h-[90vh] lg:min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-brand-dark text-white">
-        <!-- Background Image of El Salvador Landscape (Lago de Coatepeque / Volcán) -->
         <div class="absolute inset-0 z-0">
             <img src="img/home.jpg" alt="El Salvador Landscape" class="w-full h-full object-cover object-center">
             <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent"></div>
@@ -115,20 +129,19 @@
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="max-w-2xl text-left">
-                <span class="block text-xs sm:text-sm font-bold tracking-widest text-gray-200 uppercase mb-4">
+                <span data-i18n="hero_badge" class="block text-xs sm:text-sm font-bold tracking-widest text-gray-200 uppercase mb-4">
                     EL SALVADOR TE ESPERA
                 </span>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-white mb-6">
+                <h1 data-i18n="hero_title" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-white mb-6">
                     ¿Y si descubrir<br>El Salvador fuera<br>mucho más fácil?
                 </h1>
-                <p class="text-base sm:text-lg text-gray-200 font-normal leading-relaxed mb-8 max-w-xl">
-                    Viaja SV reúne información y experiencias turísticas en un solo lugar para que planifiques tu próxima aventura en El Salvador
+                <p data-i18n="hero_desc" class="text-base sm:text-lg text-gray-200 font-normal leading-relaxed mb-8 max-w-xl">
+                    Viaja SV reúne información y experiencias turísticas en un solo lugar para que planifiques tu próxima aventura en El Salvador.
                 </p>
 
-                <!-- NUEVO BOTÓN "Ir a la plataforma" con color #032252 semitransparente -->
                 <div>
                     <a href="https://viajasv.alc.onl/" class="inline-flex items-center gap-2.5 px-8 py-3.5 text-base font-semibold text-white btn-custom-navy rounded-full shadow-2xl">
-                        Ir a la plataforma
+                        <span data-i18n="btn_ir_plataforma">Ir a la plataforma</span>
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
@@ -136,25 +149,23 @@
         </div>
     </section>
 
-    <!-- 3. DESCUBRE EL SALVADOR (2 Columnas: Texto Izquierda + Grid 6 Categorías Derecha) -->
+    <!-- 3. DESCUBRE EL SALVADOR -->
     <section id="descubre" class="py-20 lg:py-28 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Columna Izquierda: Textos informativos -->
                 <div class="lg:col-span-5 space-y-5 text-left">
-                    <span class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
+                    <span data-i18n="descubre_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
                         DESCUBRE EL SALVADOR
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    <h2 data-i18n="descubre_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
                         Todo lo que buscas para descubrir El Salvador, en un solo lugar
                     </h2>
-                    <p class="text-gray-600 text-base leading-relaxed pt-2">
-                        Accede a información turística organizada y útil para que encuentres los mejores destinos, experiencias y actividades
+                    <p data-i18n="descubre_desc" class="text-gray-600 text-base leading-relaxed pt-2">
+                        Accede a información turística organizada y útil para que encuentres los mejores destinos, experiencias y actividades.
                     </p>
                 </div>
 
-                <!-- Columna Derecha: Grid de 6 Categorías -->
                 <div class="lg:col-span-7">
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-5">
                         
@@ -166,7 +177,7 @@
                                 <div class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/30 flex items-center justify-center">
                                     <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
                                 </div>
-                                <span class="font-bold text-base sm:text-lg">Destinos</span>
+                                <span data-i18n="cat_destinos" class="font-bold text-base sm:text-lg">Destinos</span>
                             </div>
                         </div>
 
@@ -178,7 +189,7 @@
                                 <div class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/30 flex items-center justify-center">
                                     <i data-lucide="waves" class="w-5 h-5 text-white"></i>
                                 </div>
-                                <span class="font-bold text-base sm:text-lg">Playas</span>
+                                <span data-i18n="cat_playas" class="font-bold text-base sm:text-lg">Playas</span>
                             </div>
                         </div>
 
@@ -190,7 +201,7 @@
                                 <div class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/30 flex items-center justify-center">
                                     <i data-lucide="leaf" class="w-5 h-5 text-white"></i>
                                 </div>
-                                <span class="font-bold text-base sm:text-lg">Naturaleza</span>
+                                <span data-i18n="cat_naturaleza" class="font-bold text-base sm:text-lg">Naturaleza</span>
                             </div>
                         </div>
 
@@ -202,7 +213,7 @@
                                 <div class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/30 flex items-center justify-center">
                                     <i data-lucide="landmark" class="w-5 h-5 text-white"></i>
                                 </div>
-                                <span class="font-bold text-base sm:text-lg">Cultura</span>
+                                <span data-i18n="cat_cultura" class="font-bold text-base sm:text-lg">Cultura</span>
                             </div>
                         </div>
 
@@ -214,7 +225,7 @@
                                 <div class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/30 flex items-center justify-center">
                                     <i data-lucide="utensils" class="w-5 h-5 text-white"></i>
                                 </div>
-                                <span class="font-bold text-base sm:text-lg">Gastronomía</span>
+                                <span data-i18n="cat_gastronomia" class="font-bold text-base sm:text-lg">Gastronomía</span>
                             </div>
                         </div>
 
@@ -226,7 +237,7 @@
                                 <div class="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/30 flex items-center justify-center">
                                     <i data-lucide="compass" class="w-5 h-5 text-white"></i>
                                 </div>
-                                <span class="font-bold text-base sm:text-lg">Experiencias</span>
+                                <span data-i18n="cat_experiencias" class="font-bold text-base sm:text-lg">Experiencias</span>
                             </div>
                         </div>
 
@@ -242,7 +253,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 
-                <!-- Imagen de Viajero -->
                 <div class="relative">
                     <div class="relative rounded-3xl overflow-hidden shadow-xl">
                         <img src="img/viaja.png" alt="Explorando El Salvador" class="w-full h-[380px] sm:h-[480px] object-cover">
@@ -252,26 +262,25 @@
                             <i data-lucide="sparkles" class="w-7 h-7"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-bold text-slate-900">100% El Salvador</p>
-                            <p class="text-xs text-gray-500">Turismo organizado y directo</p>
+                            <p data-i18n="badge_sv_title" class="text-sm font-bold text-slate-900">100% El Salvador</p>
+                            <p data-i18n="badge_sv_desc" class="text-xs text-gray-500">Turismo organizado y directo</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Explicación del proyecto -->
                 <div class="space-y-6 text-left">
-                    <span class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
+                    <span data-i18n="about_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
                         SOBRE VIAJA SV
                     </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                    <h2 data-i18n="about_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
                         Viaja SV es una plataforma creada para hacer que descubrir y planificar experiencias dentro de El Salvador sea más sencillo
                     </h2>
-                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                    <p data-i18n="about_desc" class="text-gray-600 text-base sm:text-lg leading-relaxed">
                         Actualmente, la información turística puede encontrarse dispersa en diferentes lugares, redes sociales, páginas y recomendaciones. Viaja SV busca centralizar y organizar esa información para que puedas descubrir opciones y tomar decisiones de viaje con mayor facilidad.
                     </p>
                     <div class="pt-2">
                         <a href="https://viajasv.alc.onl/" class="inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue rounded-full hover:bg-brand-hover transition-all shadow-lg hover:shadow-brand-blue/30">
-                            Descubrir la Plataforma
+                            <span data-i18n="about_btn">Descubrir la Plataforma</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -285,9 +294,9 @@
     <section id="como-funciona" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">CÓMO FUNCIONA</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
-                    Tu próxima aventura, en 3 pasos.
+                <span data-i18n="how_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">CÓMO FUNCIONA</span>
+                <h2 data-i18n="how_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+                    Tu próxima aventura, en 3 pasos
                 </h2>
             </div>
 
@@ -298,8 +307,8 @@
                         <i data-lucide="search" class="w-7 h-7"></i>
                     </div>
                     <span class="text-brand-blue font-extrabold text-lg mb-1">01</span>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Descubre</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Encuentra lugares y experiencias que despierten tu interés.</p>
+                    <h3 data-i18n="step1_title" class="text-xl font-bold text-slate-900 mb-2">Descubre</h3>
+                    <p data-i18n="step1_desc" class="text-gray-600 text-sm leading-relaxed">Encuentra lugares y experiencias que despierten tu interés.</p>
                 </div>
 
                 <!-- Paso 02 -->
@@ -308,8 +317,8 @@
                         <i data-lucide="compass" class="w-7 h-7"></i>
                     </div>
                     <span class="text-brand-blue font-extrabold text-lg mb-1">02</span>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Explora</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Conoce información útil de cada destino.</p>
+                    <h3 data-i18n="step2_title" class="text-xl font-bold text-slate-900 mb-2">Explora</h3>
+                    <p data-i18n="step2_desc" class="text-gray-600 text-sm leading-relaxed">Conoce información útil de cada destino.</p>
                 </div>
 
                 <!-- Paso 03 -->
@@ -318,8 +327,8 @@
                         <i data-lucide="map" class="w-7 h-7"></i>
                     </div>
                     <span class="text-brand-blue font-extrabold text-lg mb-1">03</span>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Viaja</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Planifica tu próxima experiencia en El Salvador.</p>
+                    <h3 data-i18n="step3_title" class="text-xl font-bold text-slate-900 mb-2">Viaja</h3>
+                    <p data-i18n="step3_desc" class="text-gray-600 text-sm leading-relaxed">Planifica tu próxima experiencia en El Salvador.</p>
                 </div>
             </div>
         </div>
@@ -337,61 +346,57 @@
                 <span class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm bg-brand-blue/10 px-3 py-1 rounded-md border border-brand-blue/30 inline-block mb-4">
                     EL SALVADOR
                 </span>
-                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-                    El Salvador tiene mucho por descubrir.
+                <h2 data-i18n="feat_title" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                    El Salvador tiene mucho por descubrir
                 </h2>
-                <p class="text-lg text-gray-300 font-light leading-relaxed">
+                <p data-i18n="feat_desc" class="text-lg text-gray-300 font-light leading-relaxed">
                     Viaja SV conecta a las personas con experiencias que quizá todavía no conocen.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 7. BENEFICIOS (POR QUÉ ELEGIR VIAJA SV) -->
+    <!-- 7. BENEFICIOS -->
     <section class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">POR QUÉ ELEGIR VIAJA SV</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
-                    Todo lo que necesitas, en un solo lugar.
+                <span data-i18n="ben_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">POR QUÉ ELEGIR VIAJA SV</span>
+                <h2 data-i18n="ben_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+                    Todo lo que necesitas, en un solo lugar
                 </h2>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Beneficio 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
                     <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="layout-grid" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Información organizada</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Encuentra información turística de forma clara y sencilla.</p>
+                    <h3 data-i18n="ben1_title" class="text-lg font-bold text-slate-900 mb-2">Información organizada</h3>
+                    <p data-i18n="ben1_desc" class="text-gray-600 text-sm leading-relaxed">Encuentra información turística de forma clara y sencilla.</p>
                 </div>
 
-                <!-- Beneficio 2 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
                     <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="eye" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Descubrimiento</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Descubre lugares y experiencias que podrían pasar desapercibidos.</p>
+                    <h3 data-i18n="ben2_title" class="text-lg font-bold text-slate-900 mb-2">Descubrimiento</h3>
+                    <p data-i18n="ben2_desc" class="text-gray-600 text-sm leading-relaxed">Descubre lugares y experiencias que podrían pasar desapercibidos.</p>
                 </div>
 
-                <!-- Beneficio 3 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
                     <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="clock" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Facilidad</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Reduce el tiempo necesario para buscar y organizar información.</p>
+                    <h3 data-i18n="ben3_title" class="text-lg font-bold text-slate-900 mb-2">Facilidad</h3>
+                    <p data-i18n="ben3_desc" class="text-gray-600 text-sm leading-relaxed">Reduce el tiempo necesario para buscar y organizar información.</p>
                 </div>
 
-                <!-- Beneficio 4 -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover">
                     <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-xl flex items-center justify-center mb-6">
                         <i data-lucide="heart" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Experiencias</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Conecta con diferentes opciones para disfrutar El Salvador.</p>
+                    <h3 data-i18n="ben4_title" class="text-lg font-bold text-slate-900 mb-2">Experiencias</h3>
+                    <p data-i18n="ben4_desc" class="text-gray-600 text-sm leading-relaxed">Conecta con diferentes opciones para disfrutar El Salvador.</p>
                 </div>
             </div>
         </div>
@@ -404,14 +409,14 @@
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
+            <h2 data-i18n="cta_title" class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
                 Tu próxima aventura puede estar más cerca de lo que imaginas
             </h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10 font-light">
+            <p data-i18n="cta_desc" class="text-lg text-gray-300 max-w-2xl mx-auto mb-10 font-light">
                 Descubre nuevas experiencias, conoce nuevos lugares y empieza a explorar El Salvador con Viaja SV
             </p>
             <a href="https://viajasv.alc.onl/" class="inline-flex items-center gap-2 px-9 py-4 text-base font-semibold text-white btn-custom-navy rounded-full shadow-2xl hover:scale-105">
-                Explorar Viaja SV
+                <span data-i18n="cta_btn">Explorar Viaja SV</span>
                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
             </a>
         </div>
@@ -422,27 +427,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-white/10">
                 
-                <!-- Logo & Tagline -->
                 <div class="flex flex-col items-center md:items-start gap-3">
                     <a href="#" class="flex items-center gap-2.5">
-                        <img src="img/logo/logo.png" alt="Viaja SV" class="h-9 w-auto object-contain" onerror="this.onerror=null; this.style.display='none'; document.getElementById('logo-fallback-footer').style.display='flex';">
-                        
+                        <img src="img/logo/logo.png" alt="Viaja SV" class="h-9 w-auto object-contain" onerror="this.onerror=null; this.style.display='none';">
+                    </a>
                 </div>
 
-                <!-- Footer Navigation Links -->
+                <!-- Footer Links -->
                 <nav class="flex flex-wrap justify-center gap-6 text-sm">
-                    <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
-                    <a href="#descubre" class="hover:text-white transition-colors">Descubre</a>
-                    <a href="#como-funciona" class="hover:text-white transition-colors">Cómo funciona</a>
-                    <a href="#experiencias" class="hover:text-white transition-colors">Experiencias</a>
-                    <a href="#sobre-nosotros" class="hover:text-white transition-colors">Sobre nosotros</a>
-                    <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+                    <a href="#inicio" data-i18n="nav_inicio" class="hover:text-white transition-colors">Inicio</a>
+                    <a href="#descubre" data-i18n="nav_descubre" class="hover:text-white transition-colors">Descubre</a>
+                    <a href="#como-funciona" data-i18n="nav_como_funciona" class="hover:text-white transition-colors">Cómo funciona</a>
+                    <a href="#experiencias" data-i18n="nav_experiencias" class="hover:text-white transition-colors">Experiencias</a>
+                    <a href="#sobre-nosotros" data-i18n="nav_sobre_nosotros" class="hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="#contacto" data-i18n="nav_contacto" class="hover:text-white transition-colors">Contacto</a>
                 </nav>
 
-                <!-- Social Media Icons -->
-                 <div class="flex items-center gap-3">
-                    
-                    <!-- Instagram -->
+                <!-- Social Icons -->
+                <div class="flex items-center gap-3">
                     <a href="https://www.instagram.com/viaja_sv" target="_blank" rel="noopener noreferrer" 
                        aria-label="Instagram de Viaja SV" 
                        class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 hover:border-transparent text-slate-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-pink-500/20 group">
@@ -451,7 +453,6 @@
                         </svg>
                     </a>
 
-                    <!-- Facebook -->
                     <a href="https://www.facebook.com/profile.php?id=61593247474932#" target="_blank" rel="noopener noreferrer" 
                        aria-label="Facebook de Viaja SV" 
                        class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:bg-blue-600 hover:border-transparent text-slate-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-blue-600/20 group">
@@ -460,7 +461,6 @@
                         </svg>
                     </a>
 
-                    <!-- TikTok (SVG Nativo Preciso) -->
                     <a href="https://www.tiktok.com/@viajasv" target="_blank" rel="noopener noreferrer" 
                        aria-label="TikTok de Viaja SV" 
                        class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:bg-black hover:border-slate-600 text-slate-300 hover:text-cyan-400 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-cyan-500/10 group">
@@ -469,30 +469,183 @@
                         </svg>
                     </a>
 
-                    <!-- Correo Electrónico / Email -->
                     <a href="mailto:viajasv.info@gmail.com" 
                        aria-label="Enviar correo a Viaja SV" 
                        class="w-11 h-11 rounded-xl bg-slate-800/80 border border-slate-700/80 hover:bg-emerald-600 hover:border-transparent text-slate-300 hover:text-white flex items-center justify-center transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-emerald-600/20 group"
                        title="viajasv.info@gmail.com">
                         <i data-lucide="mail" class="w-5 h-5"></i>
                     </a>
-
                 </div>
             </div>
 
-            <!-- Copyright -->
             <div class="pt-8 text-center text-xs text-gray-500">
-                <p>&copy; 2026 Viaja SV. Todos los derechos reservados.</p>
+                <p data-i18n="footer_copyright">&copy; 2026 Viaja SV. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts y Sistema de Traducción -->
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        // Diccionario completo de traducciones (Español / Inglés)
+        const translations = {
+            es: {
+                page_title: "Viaja SV - Descubre El Salvador",
+                nav_inicio: "Inicio",
+                nav_descubre: "Descubre",
+                nav_como_funciona: "Cómo funciona",
+                nav_experiencias: "Experiencias",
+                nav_sobre_nosotros: "Sobre nosotros",
+                nav_contacto: "Contacto",
+                btn_ir_plataforma: "Ir a la plataforma",
+                mobile_lang_label: "Idioma:",
+                hero_badge: "EL SALVADOR TE ESPERA",
+                hero_title: "¿Y si descubrir<br>El Salvador fuera<br>mucho más fácil?",
+                hero_desc: "Viaja SV reúne información y experiencias turísticas en un solo lugar para que planifiques tu próxima aventura en El Salvador.",
+                descubre_tag: "DESCUBRE EL SALVADOR",
+                descubre_title: "Todo lo que buscas para descubrir El Salvador, en un solo lugar",
+                descubre_desc: "Accede a información turística organizada y útil para que encuentres los mejores destinos, experiencias y actividades.",
+                cat_destinos: "Destinos",
+                cat_playas: "Playas",
+                cat_naturaleza: "Naturaleza",
+                cat_cultura: "Cultura",
+                cat_gastronomia: "Gastronomía",
+                cat_experiencias: "Experiencias",
+                badge_sv_title: "100% El Salvador",
+                badge_sv_desc: "Turismo organizado y directo",
+                about_tag: "SOBRE VIAJA SV",
+                about_title: "Viaja SV es una plataforma creada para hacer que descubrir y planificar experiencias dentro de El Salvador sea más sencillo",
+                about_desc: "Actualmente, la información turística puede encontrarse dispersa en diferentes lugares, redes sociales, páginas y recomendaciones. Viaja SV busca centralizar y organizar esa información para que puedas descubrir opciones y tomar decisiones de viaje con mayor facilidad.",
+                about_btn: "Descubrir la Plataforma",
+                how_tag: "CÓMO FUNCIONA",
+                how_title: "Tu próxima aventura, en 3 pasos",
+                step1_title: "Descubre",
+                step1_desc: "Encuentra lugares y experiencias que despierten tu interés.",
+                step2_title: "Explora",
+                step2_desc: "Conoce información útil de cada destino.",
+                step3_title: "Viaja",
+                step3_desc: "Planifica tu próxima experiencia en El Salvador.",
+                feat_title: "El Salvador tiene mucho por descubrir",
+                feat_desc: "Viaja SV conecta a las personas con experiencias que quizá todavía no conocen.",
+                ben_tag: "POR QUÉ ELEGIR VIAJA SV",
+                ben_title: "Todo lo que necesitas, en un solo lugar",
+                ben1_title: "Información organizada",
+                ben1_desc: "Encuentra información turística de forma clara y sencilla.",
+                ben2_title: "Descubrimiento",
+                ben2_desc: "Descubre lugares y experiencias que podrían pasar desapercibidos.",
+                ben3_title: "Facilidad",
+                ben3_desc: "Reduce el tiempo necesario para buscar y organizar información.",
+                ben4_title: "Experiencias",
+                ben4_desc: "Conecta con diferentes opciones para disfrutar El Salvador.",
+                cta_title: "Tu próxima aventura puede estar más cerca de lo que imaginas",
+                cta_desc: "Descubre nuevas experiencias, conoce nuevos lugares y empieza a explorar El Salvador con Viaja SV",
+                cta_btn: "Explorar Viaja SV",
+                footer_copyright: "© 2026 Viaja SV. Todos los derechos reservados."
+            },
+            en: {
+                page_title: "Viaja SV - Discover El Salvador",
+                nav_inicio: "Home",
+                nav_descubre: "Discover",
+                nav_como_funciona: "How it works",
+                nav_experiencias: "Experiences",
+                nav_sobre_nosotros: "About us",
+                nav_contacto: "Contact",
+                btn_ir_plataforma: "Go to platform",
+                mobile_lang_label: "Language:",
+                hero_badge: "EL SALVADOR AWAITS YOU",
+                hero_title: "What if discovering<br>El Salvador were<br>much easier?",
+                hero_desc: "Viaja SV brings together tourist information and experiences in one place so you can plan your next adventure in El Salvador.",
+                descubre_tag: "DISCOVER EL SALVADOR",
+                descubre_title: "Everything you're looking for to discover El Salvador, all in one place",
+                descubre_desc: "Access organized and useful tourist information to find the best destinations, experiences, and activities.",
+                cat_destinos: "Destinations",
+                cat_playas: "Beaches",
+                cat_naturaleza: "Nature",
+                cat_cultura: "Culture",
+                cat_gastronomia: "Gastronomy",
+                cat_experiencias: "Experiences",
+                badge_sv_title: "100% El Salvador",
+                badge_sv_desc: "Direct and organized tourism",
+                about_tag: "ABOUT VIAJA SV",
+                about_title: "Viaja SV is a platform designed to make discovering and planning experiences across El Salvador easier",
+                about_desc: "Currently, tourist information is scattered across different places, social media, websites, and recommendations. Viaja SV centralizes and organizes this information so you can discover options and make travel decisions with ease.",
+                about_btn: "Discover the Platform",
+                how_tag: "HOW IT WORKS",
+                how_title: "Your next adventure, in 3 steps",
+                step1_title: "Discover",
+                step1_desc: "Find places and experiences that spark your interest.",
+                step2_title: "Explore",
+                step2_desc: "Learn useful information about each destination.",
+                step3_title: "Travel",
+                step3_desc: "Plan your next experience in El Salvador.",
+                feat_title: "El Salvador has so much to discover",
+                feat_desc: "Viaja SV connects people with unique experiences they might not know yet.",
+                ben_tag: "WHY CHOOSE VIAJA SV",
+                ben_title: "Everything you need, in one place",
+                ben1_title: "Organized Information",
+                ben1_desc: "Find tourist information clearly and effortlessly.",
+                ben2_title: "Discovery",
+                ben2_desc: "Discover places and experiences that might go unnoticed.",
+                ben3_title: "Simplicity",
+                ben3_desc: "Reduce the time needed to search and organize information.",
+                ben4_title: "Experiences",
+                ben4_desc: "Connect with diverse ways to enjoy and feel El Salvador.",
+                cta_title: "Your next adventure might be closer than you think",
+                cta_desc: "Discover new experiences, explore new destinations, and start exploring El Salvador with Viaja SV",
+                cta_btn: "Explore Viaja SV",
+                footer_copyright: "© 2026 Viaja SV. All rights reserved."
+            }
+        };
 
-        // Mobile menu toggle logic
+        // Estado del idioma (recordado de localStorage o por defecto 'es')
+        let currentLang = localStorage.getItem('viajasv_lang') || 'es';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            localStorage.setItem('viajasv_lang', lang);
+
+            // Cambiar título de pestaña
+            if (translations[lang] && translations[lang].page_title) {
+                document.title = translations[lang].page_title;
+            }
+
+            // Traducir todos los elementos marcados con data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Actualizar etiquetas en los botones
+            const desktopLabel = document.getElementById('lang-label');
+            if (desktopLabel) {
+                desktopLabel.textContent = lang.toUpperCase();
+            }
+
+            const mobileLabel = document.getElementById('mobile-lang-label');
+            if (mobileLabel) {
+                mobileLabel.textContent = lang === 'es' ? 'Español (ES)' : 'English (EN)';
+            }
+        }
+
+        function toggleLanguage() {
+            const newLang = currentLang === 'es' ? 'en' : 'es';
+            applyLanguage(newLang);
+        }
+
+        // Listeners para los botones de idioma
+        const langToggleBtn = document.getElementById('lang-toggle-btn');
+        if (langToggleBtn) {
+            langToggleBtn.addEventListener('click', toggleLanguage);
+        }
+
+        const mobileLangToggleBtn = document.getElementById('mobile-lang-toggle-btn');
+        if (mobileLangToggleBtn) {
+            mobileLangToggleBtn.addEventListener('click', toggleLanguage);
+        }
+
+        // Menú móvil toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIconOpen = document.getElementById('menu-icon-open');
@@ -512,6 +665,10 @@
                 }
             });
         }
+
+        // Inicializar iconos y aplicar idioma al cargar
+        applyLanguage(currentLang);
+        lucide.createIcons();
     </script>
 </body>
 </html>
