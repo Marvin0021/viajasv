@@ -68,12 +68,12 @@
                     <img src="img/logo/logo.png" alt="Viaja SV" class="h-10 w-auto object-contain" onerror="this.onerror=null; this.style.display='none';">
                 </a>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Desktop Navigation Links (Ordenados) -->
                 <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium">
                     <a href="#inicio" data-i18n="nav_inicio" class="text-white hover:text-white/80 transition-colors">Inicio</a>
                     <a href="#descubre" data-i18n="nav_descubre" class="text-white/90 hover:text-white transition-colors">Descubre</a>
+                    <a href="#te-ofrecemos" data-i18n="nav_te_ofrecemos" class="text-white/90 hover:text-white transition-colors">Te ofrecemos</a>
                     <a href="#como-funciona" data-i18n="nav_como_funciona" class="text-white/90 hover:text-white transition-colors">Cómo funciona</a>
-                    <a href="#experiencias" data-i18n="nav_experiencias" class="text-white/90 hover:text-white transition-colors">Experiencias</a>
                     <a href="#sobre-nosotros" data-i18n="nav_sobre_nosotros" class="text-white/90 hover:text-white transition-colors">Sobre nosotros</a>
                     <a href="#contacto" data-i18n="nav_contacto" class="text-white/90 hover:text-white transition-colors">Contacto</a>
 
@@ -98,8 +98,8 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark/95 backdrop-blur-md border-b border-white/10 px-4 pt-4 pb-6 space-y-3">
             <a href="#inicio" data-i18n="nav_inicio" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Inicio</a>
             <a href="#descubre" data-i18n="nav_descubre" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Descubre</a>
+            <a href="#te-ofrecemos" data-i18n="nav_te_ofrecemos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Te ofrecemos</a>
             <a href="#como-funciona" data-i18n="nav_como_funciona" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Cómo funciona</a>
-            <a href="#experiencias" data-i18n="nav_experiencias" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Experiencias</a>
             <a href="#sobre-nosotros" data-i18n="nav_sobre_nosotros" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Sobre nosotros</a>
             <a href="#contacto" data-i18n="nav_contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:bg-white/10">Contacto</a>
             
@@ -248,42 +248,88 @@
         </div>
     </section>
 
-    <!-- 4. SOBRE VIAJA SV -->
-    <section id="sobre-nosotros" class="py-20 bg-slate-50 border-y border-slate-200/60">
+    <!-- 4. NUEVO APARTADO: TE OFRECEMOS -->
+    <section id="te-ofrecemos" class="py-20 lg:py-28 bg-slate-50 border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span data-i18n="offer_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
+                    TE OFRECEMOS
+                </span>
+                <h2 data-i18n="offer_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+                    Servicios integrales para tu viaje ideal
+                </h2>
+                <p data-i18n="offer_desc" class="text-gray-600 text-base mt-3">
+                    Encuentra soluciones confiables y coordinadas en un solo lugar para que tu estancia en El Salvador sea cómoda, segura y memorable.
+                </p>
+            </div>
+
+            <!-- Grid de los 6 Servicios -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 
-                <div class="relative">
-                    <div class="relative rounded-3xl overflow-hidden shadow-xl">
-                        <img src="img/viaja.png" alt="Explorando El Salvador" class="w-full h-[380px] sm:h-[480px] object-cover">
+                <!-- 1. Transporte -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col items-start text-left">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="bus" class="w-7 h-7"></i>
                     </div>
-                    <div class="absolute -bottom-5 -right-5 hidden sm:flex items-center gap-4 bg-white p-4 rounded-2xl shadow-lg border border-gray-100">
-                        <div class="bg-blue-50 p-3 rounded-xl text-brand-blue">
-                            <i data-lucide="sparkles" class="w-7 h-7"></i>
-                        </div>
-                        <div>
-                            <p data-i18n="badge_sv_title" class="text-sm font-bold text-slate-900">100% El Salvador</p>
-                            <p data-i18n="badge_sv_desc" class="text-xs text-gray-500">Turismo organizado y directo</p>
-                        </div>
-                    </div>
+                    <h3 data-i18n="offer_transporte_title" class="text-xl font-bold text-slate-900 mb-2">Transporte</h3>
+                    <p data-i18n="offer_transporte_desc" class="text-gray-600 text-sm leading-relaxed">
+                        Traslados seguros, rutas turísticas y opciones de movilidad confiables para recorrer el país con total tranquilidad.
+                    </p>
                 </div>
 
-                <div class="space-y-6 text-left">
-                    <span data-i18n="about_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
-                        SOBRE VIAJA SV
-                    </span>
-                    <h2 data-i18n="about_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-                        Viaja SV es una plataforma creada para hacer que descubrir y planificar experiencias dentro de El Salvador sea más sencillo
-                    </h2>
-                    <p data-i18n="about_desc" class="text-gray-600 text-base sm:text-lg leading-relaxed">
-                        Actualmente, la información turística puede encontrarse dispersa en diferentes lugares, redes sociales, páginas y recomendaciones. Viaja SV busca centralizar y organizar esa información para que puedas descubrir opciones y tomar decisiones de viaje con mayor facilidad.
-                    </p>
-                    <div class="pt-2">
-                        <a href="https://viajasv.alc.onl/" class="inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue rounded-full hover:bg-brand-hover transition-all shadow-lg hover:shadow-brand-blue/30">
-                            <span data-i18n="about_btn">Descubrir la Plataforma</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </a>
+                <!-- 2. Hospedaje -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col items-start text-left">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="hotel" class="w-7 h-7"></i>
                     </div>
+                    <h3 data-i18n="offer_hospedaje_title" class="text-xl font-bold text-slate-900 mb-2">Hospedaje</h3>
+                    <p data-i18n="offer_hospedaje_desc" class="text-gray-600 text-sm leading-relaxed">
+                        Hoteles de playa, cabañas de montaña, resorts y hostales boutique adaptados a tu estilo y presupuesto.
+                    </p>
+                </div>
+
+                <!-- 3. Alquiler de vehículos -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col items-start text-left">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="car" class="w-7 h-7"></i>
+                    </div>
+                    <h3 data-i18n="offer_vehiculos_title" class="text-xl font-bold text-slate-900 mb-2">Alquiler de vehículos</h3>
+                    <p data-i18n="offer_vehiculos_desc" class="text-gray-600 text-sm leading-relaxed">
+                        Flota variada de autos compactos, camionetas 4x4 y vehículos familiares con tarifas claras para viajar a tu propio ritmo.
+                    </p>
+                </div>
+
+                <!-- 4. Guías certificados -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col items-start text-left">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="award" class="w-7 h-7"></i>
+                    </div>
+                    <h3 data-i18n="offer_guias_title" class="text-xl font-bold text-slate-900 mb-2">Guías certificados</h3>
+                    <p data-i18n="offer_guias_desc" class="text-gray-600 text-sm leading-relaxed">
+                        Profesionales locales capacitados que te mostrarán la historia, naturaleza y secretos mejor guardados de cada destino.
+                    </p>
+                </div>
+
+                <!-- 5. Paquetes turísticos -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col items-start text-left">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="briefcase" class="w-7 h-7"></i>
+                    </div>
+                    <h3 data-i18n="offer_paquetes_title" class="text-xl font-bold text-slate-900 mb-2">Paquetes turísticos</h3>
+                    <p data-i18n="offer_paquetes_desc" class="text-gray-600 text-sm leading-relaxed">
+                        Itinerarios prediseñados y a la medida para disfrutar volcanes, olas, cultura y aventura sin preocupaciones ni complicaciones.
+                    </p>
+                </div>
+
+                <!-- 6. Restaurantes -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 card-hover flex flex-col items-start text-left">
+                    <div class="w-14 h-14 bg-blue-50 text-brand-blue rounded-2xl flex items-center justify-center mb-6">
+                        <i data-lucide="utensils" class="w-7 h-7"></i>
+                    </div>
+                    <h3 data-i18n="offer_restaurantes_title" class="text-xl font-bold text-slate-900 mb-2">Restaurantes</h3>
+                    <p data-i18n="offer_restaurantes_desc" class="text-gray-600 text-sm leading-relaxed">
+                        Recomendaciones culinarias selectas, desde auténticas pupuserías tradicionales hasta gastronomía internacional y cafés de altura.
+                    </p>
                 </div>
 
             </div>
@@ -291,7 +337,7 @@
     </section>
 
     <!-- 5. CÓMO FUNCIONA -->
-    <section id="como-funciona" class="py-20 bg-white">
+    <section id="como-funciona" class="py-20 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span data-i18n="how_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">CÓMO FUNCIONA</span>
@@ -334,7 +380,49 @@
         </div>
     </section>
 
-    <!-- 6. SECCIÓN DESTACADA -->
+    <!-- 6. SOBRE VIAJA SV -->
+    <section id="sobre-nosotros" class="py-20 bg-slate-50 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl">
+                        <img src="img/viaja.png" alt="Explorando El Salvador" class="w-full h-[380px] sm:h-[480px] object-cover">
+                    </div>
+                    <div class="absolute -bottom-5 -right-5 hidden sm:flex items-center gap-4 bg-white p-4 rounded-2xl shadow-lg border border-gray-100">
+                        <div class="bg-blue-50 p-3 rounded-xl text-brand-blue">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <p data-i18n="badge_sv_title" class="text-sm font-bold text-slate-900">100% El Salvador</p>
+                            <p data-i18n="badge_sv_desc" class="text-xs text-gray-500">Turismo organizado y directo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 text-left">
+                    <span data-i18n="about_tag" class="text-brand-blue font-bold tracking-wider uppercase text-xs sm:text-sm">
+                        SOBRE VIAJA SV
+                    </span>
+                    <h2 data-i18n="about_title" class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+                        Viaja SV es una plataforma creada para hacer que descubrir y planificar experiencias dentro de El Salvador sea más sencillo
+                    </h2>
+                    <p data-i18n="about_desc" class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                        Actualmente, la información turística puede encontrarse dispersa en diferentes lugares, redes sociales, páginas y recomendaciones. Viaja SV busca centralizar y organizar esa información para que puedas descubrir opciones y tomar decisiones de viaje con mayor facilidad.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://viajasv.alc.onl/" class="inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue rounded-full hover:bg-brand-hover transition-all shadow-lg hover:shadow-brand-blue/30">
+                            <span data-i18n="about_btn">Descubrir la Plataforma</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SECCIÓN DESTACADA -->
     <section class="relative py-28 bg-brand-dark text-white overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="img/desubrir.jpg" alt="Atardecer El Salvador" class="w-full h-full object-cover">
@@ -356,7 +444,7 @@
         </div>
     </section>
 
-    <!-- 7. BENEFICIOS -->
+    <!-- 8. BENEFICIOS -->
     <section class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -402,7 +490,7 @@
         </div>
     </section>
 
-    <!-- 8. CTA FINAL -->
+    <!-- 9. CTA FINAL -->
     <section class="relative py-24 bg-brand-dark text-white text-center overflow-hidden">
         <div class="absolute inset-0 opacity-20">
             <img src="img/el salvador.jpg" alt="Naturaleza de El Salvador" class="w-full h-full object-cover">
@@ -422,7 +510,7 @@
         </div>
     </section>
 
-    <!-- 9. FOOTER -->
+    <!-- 10. FOOTER -->
     <footer id="contacto" class="bg-brand-dark text-gray-400 border-t border-white/10 pt-16 pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-white/10">
@@ -433,12 +521,12 @@
                     </a>
                 </div>
 
-                <!-- Footer Links -->
+                <!-- Footer Links (Ordenados) -->
                 <nav class="flex flex-wrap justify-center gap-6 text-sm">
                     <a href="#inicio" data-i18n="nav_inicio" class="hover:text-white transition-colors">Inicio</a>
                     <a href="#descubre" data-i18n="nav_descubre" class="hover:text-white transition-colors">Descubre</a>
+                    <a href="#te-ofrecemos" data-i18n="nav_te_ofrecemos" class="hover:text-white transition-colors">Te ofrecemos</a>
                     <a href="#como-funciona" data-i18n="nav_como_funciona" class="hover:text-white transition-colors">Cómo funciona</a>
-                    <a href="#experiencias" data-i18n="nav_experiencias" class="hover:text-white transition-colors">Experiencias</a>
                     <a href="#sobre-nosotros" data-i18n="nav_sobre_nosotros" class="hover:text-white transition-colors">Sobre nosotros</a>
                     <a href="#contacto" data-i18n="nav_contacto" class="hover:text-white transition-colors">Contacto</a>
                 </nav>
@@ -492,8 +580,8 @@
                 page_title: "Viaja SV - Descubre El Salvador",
                 nav_inicio: "Inicio",
                 nav_descubre: "Descubre",
+                nav_te_ofrecemos: "Te ofrecemos",
                 nav_como_funciona: "Cómo funciona",
-                nav_experiencias: "Experiencias",
                 nav_sobre_nosotros: "Sobre nosotros",
                 nav_contacto: "Contacto",
                 btn_ir_plataforma: "Ir a la plataforma",
@@ -510,6 +598,23 @@
                 cat_cultura: "Cultura",
                 cat_gastronomia: "Gastronomía",
                 cat_experiencias: "Experiencias",
+                // Te Ofrecemos
+                offer_tag: "TE OFRECEMOS",
+                offer_title: "Servicios integrales para tu viaje ideal",
+                offer_desc: "Encuentra soluciones confiables y coordinadas en un solo lugar para que tu estancia en El Salvador sea cómoda, segura y memorable.",
+                offer_transporte_title: "Transporte",
+                offer_transporte_desc: "Traslados seguros, rutas turísticas y opciones de movilidad confiables para recorrer el país con total tranquilidad.",
+                offer_hospedaje_title: "Hospedaje",
+                offer_hospedaje_desc: "Hoteles de playa, cabañas de montaña, resorts y hostales boutique adaptados a tu estilo y presupuesto.",
+                offer_vehiculos_title: "Alquiler de vehículos",
+                offer_vehiculos_desc: "Flota variada de autos compactos, camionetas 4x4 y vehículos familiares con tarifas claras para viajar a tu propio ritmo.",
+                offer_guias_title: "Guías certificados",
+                offer_guias_desc: "Profesionales locales capacitados que te mostrarán la historia, naturaleza y secretos mejor guardados de cada destino.",
+                offer_paquetes_title: "Paquetes turísticos",
+                offer_paquetes_desc: "Itinerarios prediseñados y a la medida para disfrutar volcanes, olas, cultura y aventura sin preocupaciones ni complicaciones.",
+                offer_restaurantes_title: "Restaurantes",
+                offer_restaurantes_desc: "Recomendaciones culinarias selectas, desde auténticas pupuserías tradicionales hasta gastronomía internacional y cafés de altura.",
+                // Sobre Nosotros
                 badge_sv_title: "100% El Salvador",
                 badge_sv_desc: "Turismo organizado y directo",
                 about_tag: "SOBRE VIAJA SV",
@@ -545,8 +650,8 @@
                 page_title: "Viaja SV - Discover El Salvador",
                 nav_inicio: "Home",
                 nav_descubre: "Discover",
+                nav_te_ofrecemos: "What we offer",
                 nav_como_funciona: "How it works",
-                nav_experiencias: "Experiences",
                 nav_sobre_nosotros: "About us",
                 nav_contacto: "Contact",
                 btn_ir_plataforma: "Go to platform",
@@ -563,6 +668,23 @@
                 cat_cultura: "Culture",
                 cat_gastronomia: "Gastronomy",
                 cat_experiencias: "Experiences",
+                // What we offer
+                offer_tag: "WHAT WE OFFER",
+                offer_title: "Comprehensive services for your ideal trip",
+                offer_desc: "Find reliable and coordinated solutions in one place to make your stay in El Salvador comfortable, safe, and memorable.",
+                offer_transporte_title: "Transportation",
+                offer_transporte_desc: "Safe transfers, scenic tourist routes, and reliable mobility options to travel across the country with peace of mind.",
+                offer_hospedaje_title: "Accommodation",
+                offer_hospedaje_desc: "Beachfront hotels, mountain cabins, resorts, and boutique hostels tailored to your travel style and budget.",
+                offer_vehiculos_title: "Vehicle Rental",
+                offer_vehiculos_desc: "Diverse fleet of sedans, 4x4 SUVs, and family vehicles with transparent rates to explore at your own pace.",
+                offer_guias_title: "Certified Guides",
+                offer_guias_desc: "Certified local professionals who will guide you through the history, nature, and hidden gems of every place.",
+                offer_paquetes_title: "Tour Packages",
+                offer_paquetes_desc: "Pre-designed and customized itineraries to experience volcanoes, world-class surf, culture, and adventure worry-free.",
+                offer_restaurantes_title: "Restaurants",
+                offer_restaurantes_desc: "Top dining recommendations, from authentic pupuserías to international gastronomy and scenic mountain cafes.",
+                // About Us
                 badge_sv_title: "100% El Salvador",
                 badge_sv_desc: "Direct and organized tourism",
                 about_tag: "ABOUT VIAJA SV",
@@ -666,7 +788,7 @@
             });
         }
 
-        // Inicializar iconos y aplicar idioma al cargar
+        // Inicializar idioma y generar iconos de Lucide
         applyLanguage(currentLang);
         lucide.createIcons();
     </script>
