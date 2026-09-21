@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaja SV se presenta en el Centro de Capacitaciones Oportunidades FGK</title>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #111;
+            background-color: #ffffff;
+        }
+
+        /* Top Bar Nav */
+        .top-bar {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 8px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 13px;
+            border-bottom: 1px solid #333;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .top-bar a:hover {
+            color: #e2e8f0;
+            text-decoration: underline;
+        }
+
+        /* Botón de Idioma ES / EN */
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 3px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background: #ffffff;
+            color: #121212;
+        }
+
+        /* Header con Marca / Logo estilo periódico */
+        .header-brand {
+            text-align: center;
+            padding: 20px 15px 15px;
+            border-bottom: 2px solid #111;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header-brand img {
+            max-height: 55px;
+            width: auto;
+        }
+
+        /* Estructura del Artículo / Noticias */
+        .article-container {
+            max-width: 820px;
+            margin: 30px auto 60px auto;
+            padding: 0 20px;
+        }
+
+        .article-title {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 2.3rem;
+            line-height: 1.2;
+            font-weight: bold;
+            color: #111111;
+            margin-bottom: 15px;
+            letter-spacing: -0.3px;
+        }
+
+        .article-subtitle {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1.15rem;
+            color: #444444;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        /* Contenedor de la Imagen Principal Responsiva */
+        .featured-image-container {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .featured-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.8rem;
+            color: #666666;
+            margin-top: 6px;
+            text-align: right;
+        }
+
+        /* Cuerpo del Texto Justificado */
+        .article-body {
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: 1.1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 20px;
+            color: #222222;
+        }
+
+        /* Lista simple y limpia para el equipo fundador */
+        .team-section-text {
+            margin: 25px 0;
+            padding-left: 10px;
+            border-left: 3px solid #111;
+        }
+
+        .team-section-text h3 {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-section-text ul {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .team-section-text li {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.95rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .acknowledgment {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-style: italic;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.75rem;
+            }
+
+            .article-subtitle {
+                font-size: 1rem;
+            }
+
+            .article-body {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bar de Navegación Superior -->
+    <nav class="top-bar">
+        <a href="https://viajasv.vercel.app/" target="_blank" rel="noopener">
+            <i class="fa-solid fa-house"></i> Inicio Viaja SV
+        </a>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">
+                <i class="fa-solid fa-globe"></i> <span id="langLabel">EN</span>
+            </button>
+            <a href="https://viajasv.alc.onl/" target="_blank" rel="noopener">
+                <i class="fa-solid fa-layer-group"></i> Plataforma
+            </a>
+        </div>
+    </nav>
+
+    <!-- Logo Principal / Estilo Prensa -->
+    <header class="header-brand">
+        <a href="https://viajasv.vercel.app/">
+            <img src="img/logo/logon.png" alt="Logo Viaja SV" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60?text=Viaja+SV';">
+        </a>
+    </header>
+
+    <!-- Contenido de la Noticia -->
+    <div class="article-container">
+        
+        <main class="main-article">
+            <h1 class="article-title" id="artTitle">Viaja SV se presenta en el Centro de Capacitaciones Oportunidades FGK</h1>
+            
+            <p class="article-subtitle" id="artSubtitle">Presentación oficial de la propuesta de negocio, desarrollo técnico y demostración en vivo de la experiencia digital enfocada en el turismo salvadoreño.</p>
+
+            <!-- Imagen Principal Responsiva -->
+            <div class="featured-image-container">
+                <img src="img/noticias/viajasv1.png" alt="Presentación de Viaja SV en Oportunidades FGK">
+                <p class="image-caption" id="artCaption">Fotografía: cortesía de David Castillo</p>
+            </div>
+
+            <!-- Cuerpo de la Noticia (Texto Justificado) -->
+            <article class="article-body">
+                <p id="p1">Como parte de una actividad dedicada a la presentación y socialización de propuestas de emprendimiento, el equipo fundador de Viaja SV tuvo la oportunidad de dar a conocer su propuesta de negocio en el Centro de Capacitaciones Oportunidades FGK, sede Santa Ana.</p>
+
+                <p id="p2">Durante esta jornada, el equipo presentó oficialmente la propuesta de Viaja SV, compartiendo con los asistentes la idea detrás del emprendimiento, su propósito y la visión que se está construyendo alrededor de la marca.</p>
+
+                <p id="p3">Uno de los principales elementos de la presentación fue la demostración del sitio web oficial de Viaja SV, acompañado de un demo funcional que permitió mostrar de manera práctica una parte de cómo será la plataforma y cómo se plantea brindar una experiencia digital relacionada con el turismo y el descubrimiento de diferentes destinos de El Salvador.</p>
+
+                <p id="p4">La propuesta fue presentada mediante un stand, en el que el equipo pudo explicar de primera mano el concepto de Viaja SV, mostrar los avances realizados y compartir con los participantes los elementos que forman parte de la iniciativa.</p>
+
+                <p id="p5">Más allá de presentar una idea de negocio, esta actividad representó un espacio para poner en práctica el trabajo desarrollado por el equipo, recibir comentarios, intercambiar perspectivas y continuar fortaleciendo la propuesta de Viaja SV.</p>
+
+                <p id="p6">La participación también permitió mostrar que detrás de la plataforma existe un proceso de planificación, diseño y desarrollo que busca convertir una idea en una propuesta concreta, con herramientas digitales que acompañen la experiencia de conocer y recorrer El Salvador.</p>
+
+                <!-- Equipo Fundador en Texto Normal -->
+                <div class="team-section-text">
+                    <h3 id="teamHeader">Equipo fundador de Viaja SV</h3>
+                    <ul>
+                        <li>Marvin Borja</li>
+                        <li>Milena García</li>
+                        <li>Katerin Linares</li>
+                        <li>Diego Herrera</li>
+                    </ul>
+                </div>
+
+                <p class="acknowledgment" id="p7">Agradecemos al Centro de Capacitaciones Oportunidades FGK, sede Santa Ana, por el espacio brindado para presentar nuestra propuesta y compartir este proyecto en desarrollo.</p>
+            </article>
+        </main>
+
+    </div>
+
+    <!-- Script para traducción dinámina Español / Inglés -->
+    <script>
+        let currentLang = 'es';
+
+        const content = {
+            es: {
+                langLabel: "EN",
+                artTitle: "Viaja SV se presenta en el Centro de Capacitaciones Oportunidades FGK",
+                artSubtitle: "Presentación oficial de la propuesta de negocio, desarrollo técnico y demostración en vivo de la experiencia digital enfocada en el turismo salvadoreño.",
+                artCaption: "Fotografía: cortesía de David Castillo",
+                p1: "Como parte de una actividad dedicada a la presentación y socialización de propuestas de emprendimiento, el equipo fundador de Viaja SV tuvo la oportunidad de dar a conocer su propuesta de negocio en el Centro de Capacitaciones Oportunidades FGK, sede Santa Ana.",
+                p2: "Durante esta jornada, el equipo presentó oficialmente la propuesta de Viaja SV, compartiendo con los asistentes la idea detrás del emprendimiento, su propósito y la visión que se está construyendo alrededor de la marca.",
+                p3: "Uno de los principales elementos de la presentación fue la demostración del sitio web oficial de Viaja SV, acompañado de un demo funcional que permitió mostrar de manera práctica una parte de cómo será la plataforma y cómo se plantea brindar una experiencia digital relacionada con el turismo y el descubrimiento de diferentes destinos de El Salvador.",
+                p4: "La propuesta fue presentada mediante un stand, en el que el equipo pudo explicar de primera mano el concepto de Viaja SV, mostrar los avances realizados y compartir con los participantes los elementos que forman parte de la iniciativa.",
+                p5: "Más allá de presentar una idea de negocio, esta actividad representó un espacio para poner en práctica el trabajo desarrollado por el equipo, recibir comentarios, intercambiar perspectivas y continuar fortaleciendo la propuesta de Viaja SV.",
+                p6: "La participación también permitió mostrar que detrás de la plataforma existe un proceso de planificación, diseño y desarrollo que busca convertir una idea en una propuesta concreta, con herramientas digitales que acompañen la experiencia de conocer y recorrer El Salvador.",
+                teamHeader: "Equipo fundador de Viaja SV",
+                p7: "Agradecemos al Centro de Capacitaciones Oportunidades FGK, sede Santa Ana, por el espacio brindado para presentar nuestra propuesta y compartir este proyecto en desarrollo."
+            },
+            en: {
+                langLabel: "ES",
+                artTitle: "Viaja SV presented at Oportunidades FGK Training Center",
+                artSubtitle: "Official presentation of the business proposal, technical development, and live demonstration of the digital experience focused on El Salvador tourism.",
+                artCaption: "Photo: courtesy of David Castillo",
+                p1: "As part of an event dedicated to presenting and sharing entrepreneurship proposals, the founding team of Viaja SV had the opportunity to introduce their business proposal at the Oportunidades FGK Training Center, Santa Ana branch.",
+                p2: "During this session, the team officially presented the Viaja SV proposal, sharing with attendees the core concept of the venture, its purpose, and the vision being built around the brand.",
+                p3: "One of the main elements of the presentation was the demonstration of the official Viaja SV website, accompanied by a functional demo that practically showcased how the platform will operate and how it aims to provide a digital experience related to tourism and discovering different destinations in El Salvador.",
+                p4: "The proposal was presented through a booth where the team explained the Viaja SV concept firsthand, showcased progress made, and shared the key elements that make up the initiative.",
+                p5: "Beyond presenting a business idea, this activity represented an opportunity to put the team's work into practice, receive feedback, exchange perspectives, and continue strengthening the Viaja SV proposal.",
+                p6: "Participation also demonstrated that behind the platform lies a process of planning, design, and development aiming to turn an idea into a concrete solution, with digital tools that enhance the experience of discovering and exploring El Salvador.",
+                teamHeader: "Founding Team of Viaja SV",
+                p7: "We thank the Oportunidades FGK Training Center, Santa Ana branch, for providing the space to present our proposal and share this developing project."
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            const data = content[currentLang];
+
+            document.getElementById('langLabel').innerText = data.langLabel;
+            document.getElementById('artTitle').innerText = data.artTitle;
+            document.getElementById('artSubtitle').innerText = data.artSubtitle;
+            document.getElementById('artCaption').innerText = data.artCaption;
+            document.getElementById('p1').innerText = data.p1;
+            document.getElementById('p2').innerText = data.p2;
+            document.getElementById('p3').innerText = data.p3;
+            document.getElementById('p4').innerText = data.p4;
+            document.getElementById('p5').innerText = data.p5;
+            document.getElementById('p6').innerText = data.p6;
+            document.getElementById('teamHeader').innerText = data.teamHeader;
+            document.getElementById('p7').innerText = data.p7;
+        }
+    </script>
+
+</body>
+</html>
